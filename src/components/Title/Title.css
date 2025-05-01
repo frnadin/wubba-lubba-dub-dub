@@ -1,0 +1,16 @@
+#Title {
+    transition: all 0.2s ease-in-out;
+    display: inline-block; /* Faz o hover só no conteúdo */
+    margin-bottom: 5px;
+  }
+  
+  #Title:hover {
+    transform: scale(1.05);
+    text-shadow: 0 0 15px #00FF9C;
+  }
+  
+
+
+#subTitle {
+    color: #FFEB3B;
+}

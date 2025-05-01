@@ -1,0 +1,42 @@
+.character-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1.5rem;
+    margin-top: 2rem;
+  }
+
+.character-card {
+    background-color: #1e1e1e;
+    border: 2px solid #00FF9C; 
+    border-radius: 15px;
+    transition: transform 0.2s, box-shadow 0.2s;
+    overflow: hidden; 
+    width: 300px; 
+    height: 420px; 
+}
+
+.character-card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 15px #00FF9C;
+
+}
+
+.character-card img {
+    border-radius: 13px;
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+
+}
+.character-card p {
+    margin: 0.3rem;
+    margin-bottom: 10px;
+  }
+
+  .character-card h2 {
+    white-space: nowrap; 
+    overflow: hidden;
+    text-overflow: ellipsis; 
+    margin: 20px
+  }

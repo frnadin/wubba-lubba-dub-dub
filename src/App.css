@@ -1,0 +1,28 @@
+@font-face {
+  font-family: "Get Schwifty";
+  src: url("/public/get_schwifty.ttf") format("truetype");
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  background-color: #121212;
+  color: #ffeb3b;
+  font-family: "Poppins", sans-serif;
+}
+
+.App {
+  text-align: center;
+  padding: 2rem;
+  color: FFEB3B;
+}
+
+h1 {
+  color: #02b0cc;
+  font-size: 3rem;
+  font-family: "Get Schwifty", sans-serif;
+}
+
+p {
+  color: #02b0cc;
+}
