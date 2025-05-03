@@ -1,3 +1,6 @@
+body {
+    font-family: 'Orbitron', sans-serif;
+}
 
 .modal {
     position: fixed;
@@ -9,17 +12,67 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    visibility: visible; 
-    opacity: 1; 
-    transition: opacity 0.3s ease;
+    z-index: 1000;
 }
 
 
 .modal-content {
-    background-color: black;
-    padding: 20px;
+    display: flex;
+    flex-direction: row;
+    background-color: #1c1c1e;
+    padding: 70px 90px;
     border-radius: 10px;
-    max-width: 500px;
-    width: 100%;
+    max-width: 700px;
     color: #FFEB3B;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+}
+
+.character-header {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    text-align: center;
+}
+
+.character-header h2 {
+    color: #ffeb3b;
+    background-color: rgba(0, 0, 0, 0.6);
+    padding: 6px 12px;
+    border-radius: 8px;
+    font-size: 20px;
+    
+}
+.character-header img {
+ 
+    border-radius: 12px;
+}
+
+
+.character-info {
+    display: grid;
+    grid-template-columns: 1fr 1fr; 
+    gap: 12px 20px;                 
+    text-align: left;
+    width: 100%;
+    margin: 10px 30px;
+}
+
+.character-info p {
+    color:  #02b0cc;;
+    display: flex;
+    align-items: center;
+    gap: 8px;   
+    width: 100%;
+    justify-content: flex-start;
+}
+
+.character-info strong {
+    color: #FFEB3B;
+    min-width: 80px;       
+    display: inline-block;  
+}
+
+.character-info svg {
+    color: #FFEB3B;
+    flex-shrink: 0;
 }
