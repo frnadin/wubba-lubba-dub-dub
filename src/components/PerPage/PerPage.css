@@ -1,0 +1,39 @@
+.characters-per-page {
+    display: flex;
+    justify-content: right;
+    align-items: center;
+    margin: 20px 100px;
+  }
+  
+  .characters-per-page label {
+    margin-right: 10px;
+    font-weight: bold;
+    color: #ffeb3b;
+  }
+  
+  .characters-per-page select {
+    padding: 8px 12px;
+    border: none;
+    background-color: #1f1f1f;
+    color: #ffeb3b;
+    font-weight: bold;
+    cursor: pointer;
+    transition: transform 0.5s, box-shadow 0.5s, background-color 0.5s, color 0.5s;
+    outline: none;
+  }
+  
+  .characters-per-page select:hover {
+    transform: scale(1.1);
+    box-shadow: 0 0 10px #0e8d3c;
+  }
+  
+  .characters-per-page select:active {
+    transform: scale(0.95);
+    box-shadow: 0 0 5px #ffeb3b;
+  }
+  
+  .characters-per-page select:focus {
+    outline: none;
+    box-shadow: none;
+  }
+  

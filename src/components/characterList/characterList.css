@@ -8,7 +8,7 @@
 
 .character-card {
     background-color: #1e1e1e;
-    border: 2px solid #00FF9C; 
+    border: 2px solid #0e8d3c; 
     border-radius: 15px;
     transition: transform 0.2s, box-shadow 0.2s;
     overflow: hidden; 

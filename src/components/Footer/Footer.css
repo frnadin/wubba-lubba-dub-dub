@@ -1,0 +1,52 @@
+.app-footer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    padding: 20px;
+    background-color: #1f1f1f;
+    color: #02b0cc;
+    margin-top: 40px;
+    font-size: 14px;
+    border-top: 1px solid #333;
+    box-sizing: border-box;
+    position: relative; /* Necessário para o posicionamento absoluto da imagem */
+  }
+  
+  .app-footer .label {
+    color: #ffeb3b;
+    font-weight: bold;
+  }
+  
+  .app-footer a {
+    color: #0d7385;
+    text-decoration: none;
+  }
+  
+  .app-footer a:hover {
+    text-decoration: underline;
+  }
+  
+  .app-footer .social-icons {
+    display: flex;
+    gap: 20px;
+    margin-top: 10px;
+  }
+  
+  .app-footer p {
+    margin: 3px;
+  }
+  
+  .app-footer .footer-text {
+    margin-top: 10px;
+    font-size: 14px;
+  }
+  
+ 
+  
+  @keyframes rotatePortal {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+  }
+  

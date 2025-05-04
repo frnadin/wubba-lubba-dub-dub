@@ -2,6 +2,9 @@
   font-family: "Get Schwifty";
   src: url("/public/get_schwifty.ttf") format("truetype");
 }
+html {
+  scroll-behavior: smooth;
+}
 
 body {
   margin: 0;
@@ -13,8 +16,8 @@ body {
 
 .App {
   text-align: center;
-  padding: 2rem;
-  color: FFEB3B;
+  /* padding: 2rem; */
+  color: #FFEB3B;
 }
 
 h1 {
@@ -25,4 +28,10 @@ h1 {
 
 p {
   color: #02b0cc;
+}
+
+.portal-image {
+  width: 100px;
+  cursor: pointer;
+  animation: rotatePortal 2s infinite linear;
 }

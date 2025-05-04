@@ -11,7 +11,6 @@ function CharacterList({ characters, onCharacterClick }) {
                             key={character.id}
                             className="character-card"
                             onClick={() => {
-                                console.log("Character card clicked:", character); // Log para verificar
                                 onCharacterClick(character);
                             }}
                         >
