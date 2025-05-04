@@ -5,32 +5,51 @@ import CharacterList from "./components/characterList/characterList";
 import Pagination from "./components/Pagination/Pagination";
 import Title from "./components/Title/Title";
 import CharacterModal from "./components/CharacterModal/CharacterModal";
+import SearchCharacter from "./components/Search/Search";
 
 function App() {
   const [characters, setCharacters] = useState([]);
   const [page, setPage] = useState(1)
   const [totalPages, setTotalPages] = useState(1)
   const [selectedCharacter, setSelectedCharacter] = useState(null);
+  const [searchTerm, setSearchTerm] = useState("");
 
   const closeModal = () => setSelectedCharacter(null);
 
   const handleCharacterClick = (character) => {
-    console.log('Character selected:', character); // Verifique se o personagem está correto
     setSelectedCharacter(character);
-};
+  };
+
+  const handleReset = () => {
+    setSearchTerm("");
+    setPage(1);
+    fetchCharacters("", 1);
+  };
+
+  const fetchCharacters = (search = searchTerm, currentPage = page) => {
+    axios
+      .get(`https://rickandmortyapi.com/api/character`, {
+        params: {
+          page: currentPage,
+          name: search
+        }
+      })
+      .then((response) => {
+        setCharacters(response.data.results);
+        setTotalPages(response.data.info.pages);
+      })
+      .catch((error) => {
+        console.error("Erro ao buscar personagens:", error);
+        setCharacters([]);
+        setTotalPages(1);
+      });
+  };
 
 
   useEffect(() => {
-    axios
-      .get(`https://rickandmortyapi.com/api/character?page=${page}`)
-      .then((response) => {
-        setCharacters(response.data.results);
-        setTotalPages(response.data.info.pages)
-      })
-      .catch((error) => {
-        console.error("Error fetching data:", error);
-      });
+    fetchCharacters(searchTerm, page);
   }, [page]);
+
 
   useEffect(() => {
     console.log("Selected character updated:", selectedCharacter);
@@ -39,21 +58,27 @@ function App() {
   return (
     <div className="App">
 
-      <Title />
+      <Title onClick={handleReset}/>
+      <SearchCharacter onSearch={(term) => {
+        setSearchTerm(term);
+        setPage(1);
+        fetchCharacters(term, 1);
+      }} />
+
       <CharacterList characters={characters} onCharacterClick={handleCharacterClick} />
       <Pagination
         currentPage={page}
         totalPages={totalPages}
         onPageChange={setPage}
       />
-      
+
       {selectedCharacter && (
-       <div className="modal show" onClick={closeModal}>
-        <div className="modal-content" onClick={(e) => e.stopPropagation()}>
+        <div className="modal show" onClick={closeModal}>
+          <div className="modal-content" onClick={(e) => e.stopPropagation()}>
             <CharacterModal character={selectedCharacter} onClose={closeModal} />
+          </div>
         </div>
-    </div>
-)}
+      )}
 
 
 
