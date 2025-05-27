@@ -1,12 +1,24 @@
-# React + Vite
+# 🧪 Wubba Lubba Dub Dub
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Aplicação frontend construída com React + Vite que consome a [API pública do Rick and Morty](https://rickandmortyapi.com/). Permite explorar personagens com filtros por status, paginação e detalhes em modal.
 
-Currently, two official plugins are available:
+## 🚀 Tecnologias Utilizadas
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- [React](https://reactjs.org/)
+- [Vite](https://vitejs.dev/)
+- [Axios](https://axios-http.com/)
+- [React Router DOM](https://reactrouter.com/)
 
-## Expanding the ESLint configuration
+## 🔍 Funcionalidades
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+- **Busca por nome:** Filtra personagens pelo nome digitado.
+- **Filtro por status:** Permite filtrar personagens por status (Vivo, Morto, Desconhecido).
+- **Paginação:** Navega entre as páginas de resultados da API.
+- **Modal de detalhes:** Ao clicar em um personagem, exibe um modal com informações detalhadas como nome, status, espécie, gênero e localização.
+
+## 🛠️ Melhorias Sugeridas
+
+- **Aprimorar o modal:** Adicionar mais informações, como episódios em que o personagem aparece, e melhorar o estilo visual para uma melhor experiência do usuário.
+- **Responsividade:** Garantir que a aplicação seja totalmente responsiva para dispositivos móveis.
+- **Animações:** Incluir animações suaves ao abrir e fechar o modal.
+- **Tratamento de erros:** Implementar mensagens de erro amigáveis para falhas na requisição da API ou quando nenhum resultado for encontrado.
